@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time>
 /**
- * main - main block
- * description: get a random number and print number
- * return 0
+ * main - to generate a random number
+ *
+ * return: Always 0 (Success)
+ *
  */
 int main(void)
 {
