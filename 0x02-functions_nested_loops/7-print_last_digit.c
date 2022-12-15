@@ -1,23 +1,33 @@
 #include "main.h"
 
 /**
-* print_last_digit - prints the last digit of a number
-* @n: the int to extract the last digit from
-* Return: value of the last digit
+*times_table -> time table
 */
-int print_last_digit(int n)
+void times_table(void)
 {
-int a;
+	int x, y, k;
 
-if (n < 0)
-n = -n;
-
-a = n % 10;
-
-if (a < 0)
-a = -a;
-
-_putchar(a + '0');
-
-return (a);
+	for (x = 0; x < 10; x++)
+	{
+		for (y = 0; y < 10; y++)
+		{
+			k = x * y;
+			if (y == 0)
+				_putchar(k + '0');
+			if (y != 0 && k < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			} else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
