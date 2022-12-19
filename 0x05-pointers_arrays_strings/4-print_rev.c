@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_rev - This funtion prints a reverse string
- * @s: This is the input string
- * return: 0
- */
+* print_rev - This funtion prints a reverse string
+* @s: This is the input string
+* return: 0
+*/
 void print_rev(char *s)
 {  
 	int index;
