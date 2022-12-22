@@ -1,14 +1,14 @@
-icat > main.h
+cat > main.h
                                                                                                            
 #ifndef MAIN_H                                                                                                                     
 #define MAIN_H                                                                                                                     
                                                                                                                                         
 /**                                                                                                                                     
- *  * File: main.h                                                                                                                    
- *   * Auth: sam tech(Samuel birhanu)                                                                                                             
- *    * Desc: Header file containing prototypes for all functions                                                                            
- *     *       used in the 0x06. C - More pointers, arrays and strings directory.
- *      */                                                                                                                                     
+*File: main.h                                                                                                                    
+*Auth: wanjiru(mercy muia)                                                                                                             
+*Desc: Header file containing prototypes for all functions                                                                            
+*used in the 0x06. C - More pointers, arrays and strings directory.
+*/                                                                                                                                     
                                                                                                                                         
 int _putchar(char c);                                                                                                                   
 char *_strcat(char *dest, char *src);                                                                                                   
