@@ -1,18 +1,28 @@
 #include "main.h"
 /**
- * _strchr - Entry point
- * @s: input
- * @c: input
- * Return: Always 0 (Success)
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
  */
-char *_strchr(char *s, char c)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
+	int j;
  
-	for (; s[i] >= '\0'; i++)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		dest[j] = src[j];
+		j++;
 	}
-	return (0);
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
+ 
+	return (dest);
 }
+
