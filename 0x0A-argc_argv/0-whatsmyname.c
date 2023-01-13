@@ -1,15 +1,14 @@
-#include <stdio.h>                                                                                                                   
-#include "main.h"                                                                                                                                                                                                                                                        
-/**                                                                                                                                  
-* main - Print the name of the program                                                                                              
-* @argc: Count arguments                                                                                                            
-* @argv: Arguments                                                                                                                  
-*                                                                                                                                   
-* Return: Always 0 (Success)                                                                                                        
-*/                                                                                                                                  
-int main(int argc, char *argv[])                                                                                                     
-{                                                                                                                                    
-(void) argc;                                                                                                                         
-printf("%s\n", argv[0]);                                                                                                             
-return (0);                                                                                                                          
+#include <stdio.h>
+#define unused(x) (void)(x)
+/**
+ *main - main function
+ *@argc: arguments count
+ *@argv: arguments vector
+ *Return: Always o
+ */
+int main(int argc, char *argv[])
+{
+unused(argc);
+printf("%s\n", argv[0]);
+return (0);
 }
