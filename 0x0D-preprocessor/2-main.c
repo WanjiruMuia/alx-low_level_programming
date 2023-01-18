@@ -1,8 +1,8 @@
-#include <stdio.h
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
-* main - prints the name of the file program was compiled from
-* Return: Always 0
+ *main - prints the nameof the file its written on
+ *Return:returns always 0
 */
 int main(void)
 {
