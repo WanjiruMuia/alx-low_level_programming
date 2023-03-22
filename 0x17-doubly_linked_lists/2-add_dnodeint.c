@@ -1,28 +1,27 @@
-#include "stdio.h"
-#include "stdlib.h"
-#include "stddef.h"
-
-typedef struct dlistint_s
-{
-    int n;
-    struct dlistint_s *prev;
-    struct dlistint_s *next;
-} dlistint_t;
+#include "lists.h"
 
 /**
- * print_dlistint - prints all the elements of a doubly linked list
- * @h: pointer to the head of the list
- * Return: the number of nodes in the list
+ * add_dnodeint - Adds a new node at the beginning of a dlistint_t list.
+ * @head: A pointer to the head of the dlistint_t list.
+ * @n: The integer for the new node to contain.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new node.
  */
-size_t print_dlistint(const dlistint_t *h)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-    size_t count = 0;
-    while (h != NULL)
-    {
-        printf("%d\n", h->n);
-        h = h->next;
-        count++;
-    }
-    return (count);
-}
+	dlistint_t *new;
 
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->prev = NULL;
+	new->next = *head;
+	if (*head != NULL)
+		(*head)->prev = new;
+	*head = new;
+
+	return (new);
+}
