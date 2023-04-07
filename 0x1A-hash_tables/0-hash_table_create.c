@@ -1,38 +1,34 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "hash_tables.h"
 
-typedef struct hash_table_s {
-    unsigned long int size;
-    void **array;
-} hash_table_t;
+/**
+* hash_table_create - Creates a hash table.
+* @size: the size, in number of nodes, to make the new hash table.
+*
+* Return: a pointer to the newly created hash table.
+*/
+hash_table_t *hash_table_create(unsigned long int size)
+{
+unsigned int i = 0;
+hash_table_t *ht = malloc(sizeof(hash_table_t));
 
-hash_table_t *hash_table_create(unsigned long int size) {
-    if (size == 0) {
-        return NULL;
-    }
-
-    hash_table_t *hash_table = malloc(sizeof(hash_table_t));
-    if (hash_table == NULL) {
-        return NULL;
-    }
-
-    hash_table->array = calloc(size, sizeof(void *));
-    if (hash_table->array == NULL) {
-        free(hash_table);
-        return NULL;
-    }
-
-    hash_table->size = size;
-    return hash_table;
+if (ht == NULL)
+{
+fprintf(stderr, "Error: malloc failed\n");
+return (NULL);
 }
 
-int main() {
-    hash_table_t *hash_table = hash_table_create(10);
-    if (hash_table == NULL) {
-        printf("Failed to create hash table\n");
-    } else {
-        printf("Hash table created successfully\n");
-    }
-    return 0;
+ht->size = size;
+ht->array = malloc(sizeof(hash_node_t *) * size);
+if (ht->array == NULL)
+{
+fprintf(stderr, "Error: malloc failed\n");
+return (NULL);
 }
 
+for (; i < size; i++)
+ht->array[i] = NULL;
+
+return (ht);
+}
