@@ -93,9 +93,7 @@ typedef struct shash_table_s
 
 shash_table_t *shash_table_create(unsigned long int size);
 
-
 shash_node_t *set_spair(const char *key, const char *value);
-
 
 shash_node_t *set_spair_only(shash_table_t *ht, const char *key,
 			    const char *value, unsigned long int index);
