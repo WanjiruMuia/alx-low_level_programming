@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "hash_tables.h"
 
 /**
@@ -27,6 +25,7 @@ fprintf(stderr, "Error: malloc failed\n");
 return (NULL);
 }
 
+  
 for (; i < size; i++)
 ht->array[i] = NULL;
 
