@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "hash_tables.h"
+
 /**
 * hash_table_delete - deletes a hash table.
 * @ht: the hash table.
